@@ -1,0 +1,41 @@
+div {
+    background-image: url("https://www.itl.cat/pngfile/big/147-1470622_table-tennis-wallpapers-hd-4k-desktop-background-animated.jpg");
+    height: 700px;
+    min-height: 120vh;
+    width: 100%;
+    color: white;
+ }
+h1 {
+    color:white;
+    font-style: italic;
+ }
+
+ h3 {
+   color:white;
+   font-style: italic;
+}
+
+h4 {
+    color:white;
+    font-style: italic;
+ }
+ 
+a {
+   color: white;
+   font-style: italic;
+}
+h2 {
+    color:white;
+    font-style: italic;
+}
+p {
+    color: white;
+    font-style: italic;
+}
+body {
+    margin: 0;
+    top: 0;
+}
+button {
+    color: black;    
+}

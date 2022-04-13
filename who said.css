@@ -1,0 +1,99 @@
+div {
+    background-color: black;
+}
+body{
+	padding: 0;
+	margin: 0;	
+	width: 100vw;
+	height: 120vh;
+    color: black;	
+}
+.panel{
+	height: 120vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.question-container{
+    align-items: center;
+	margin: 10px;
+	padding: 5px;
+	width: 80vw;
+	height: 10vh;
+	background-color: lightblue;
+	font-size: x-large;
+	text-align: center;
+	
+}
+.result{
+	margin: 10px;
+	padding: 5px;
+	width:80vw;
+	height: 10vh;
+	text-align: center;
+	font-size: 50px;
+	
+}
+.option-container{
+    align-items: center;
+	display: flex;
+	justify-content: space-around;
+	margin: 10px;
+	padding: 5px;
+	width: 80vw;
+	height: 20vh;
+	background-color: darkblue;
+		
+}
+.option{	
+    align-items: center;
+	padding: 10px;
+	width: 15vw;
+	height: 10vh;
+	font-size: larger;
+	background-color: white;
+	border-radius: 25%;
+}
+.option:hover{
+	background-color: white;
+}
+.navigation{
+	width: 80vw;
+	height: 10vh;
+	margin: 10px;
+	padding: 5px;
+	display: flex;
+	justify-content: space-around;
+	background-color: darkblue;
+}
+
+.evaluate,.next{
+    align-items: center;
+	width:30vw;
+	height: 8vh;
+	padding: 5px;
+	font-size: larger;
+}
+.evaluate{
+    align-items: center;
+	background-color: #50DBB4;
+}
+.next{
+    align-items: center;
+	color: white;
+	background-color: #BF3325;
+}
+
+
+p,
+h2,
+h3 {
+    text-align: center;
+    color: black;
+}
+h1,
+h4 {
+    text-align: center;
+    color: white;
+}

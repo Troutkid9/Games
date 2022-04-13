@@ -1,0 +1,34 @@
+div {
+    background-image: url("https://th.bing.com/th/id/R.eca8d4629cd0a31c6c467bae18d0a745?rik=5UTPvyDf2ARrTA&riu=http%3a%2f%2fwww.hindustantimes.com%2frf%2fimage_size_960x540%2fHT%2fp2%2f2017%2f03%2f17%2fPictures%2fschool-supplies-on-green-empty-space-background_b7cfe406-0b0d-11e7-ba13-f6aef3964879.jpg&ehk=lt7QKG%2bwr%2bRLJ4qMjR6wvLdFISxMw7ySmNmQiZWvUc0%3d&risl=&pid=ImgRaw&r=0");
+    height: 700px;
+    min-height: 120vh;
+    width: 100%;
+    color: white;
+    background-position: 0px;
+    background-size: cover;
+  }
+  h4 {
+    color: black;
+  }
+  
+  h3 {
+    color: black;
+  }
+  a {
+    color: black;
+  }
+  h2 {
+    color: black;
+  }
+  h1 {
+    color: black;
+  }
+  
+  p {
+    color: black;
+  }
+  body {
+    margin: 0;
+    top: 0;
+  }
+  

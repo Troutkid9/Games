@@ -1,0 +1,125 @@
+body {
+    margin-top: 75px;
+    background-color: darkblue;
+  }
+  
+  h1,
+  h3,
+  h4 {
+    text-align: center;
+    font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+  }
+  p,
+  h2 {
+    text-align: center;
+    font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+
+  }
+  div#tableContainer {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-spacing: 10px;
+  }
+  
+  div#buttonTableContainer {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-spacing: 50px;
+  }
+  
+  .tableRow {
+    display: table-row;
+  }
+  
+  .card {
+    display: table-cell;
+    padding: 5px;
+  }
+  
+  #back {
+    display: inline-block;
+    margin-top: 60px;
+    /*margin-left: auto;
+    margin-right: auto; */
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    background-color: #fbaa19;
+    padding: 18px 40px;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.25em;
+  }
+  
+  #footer {
+    margin-bottom: 100px;
+    text-align: center;
+  }
+  
+  #reload {
+    display: inline-block;
+    margin-top: 60px;
+    /*margin-left: auto;
+    margin-right: auto; */
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    background-color: #9ce4e5;
+    padding: 18px 62px;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.25em;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-content {
+    text-align: center;
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 40%;
+    border: 5px dashed #94ade5;
+  }
+  
+  .closeButton {
+    color: black;
+    float: right;
+    font-size: 30px;
+  }
+  
+  .closeButton:hover,
+  .closeButton:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

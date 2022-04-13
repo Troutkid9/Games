@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Memory Card Game</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="memory.css">
+        <link rel="icon" type="image/png" href="favicon.png"/>
+        <script src="memory5.js"></script>
+    </head>
+    <body>
+        <h1>Memory Card Game: Friends</h1>
+    <h4>Select the pairs of matching cards in the fewest number of guesses.</h4>        
+    <h4>Craig, Maggie, Hunter, Autumn, Dani, and Unknown 1</h4>        
+    <div id="tableContainer">
+            <div class="tableRow">
+                <div class="card"><img id="card00" src="MemoryCardBack.png"></div>
+                <div class="card"><img id="card01" src="MemoryCardBack.png"></div>
+                <div class="card"><img id="card02" src="MemoryCardBack.png"></div>
+                <div class="card"><img id="card03" src="MemoryCardBack.png"></div>
+            </div>
+            <div class="tableRow">
+                <div class="card"><img id="card04" src="MemoryCardBack.png"></div>
+                <div class="card"><img id="card05" src="MemoryCardBack.png"></div>
+                <div class="card"><img id="card06" src="MemoryCardBack.png"></div>
+                <div class="card"><img id="card07" src="MemoryCardBack.png"></div>
+            </div>
+            <div class="tableRow">
+                <div class="card"><img id="card08" src="MemoryCardBack.png"></div>
+                <div class="card"><img id="card09" src="MemoryCardBack.png"></div>
+                <div class="card"><img id="card10" src="MemoryCardBack.png"></div>
+                <div class="card"><img id="card11" src="MemoryCardBack.png"></div>
+            </div>
+        </div>
+        <div id="report">
+            <h3>Score: <span id="score"></span></h3>            
+            <h3>Guesses: <span id="guesses"></span></h3>        
+            </div>
+        <div id="win" class="modal">
+            <div class="modal-content">
+                <span class="closeButton">&times;</span>
+                <h2>You won!</h2>
+                <p>Great job! You found all <span id="numCardPairs"></span> pairs in <span id="numGuesses"></span> guesses.</p>
+            </div>
+        </div>
+        <div id="footer">
+            <button onClick="window.location.reload();" type="button" class="link" id="reload">Play Again</button>
+            <p class=""><a href="Memory Options.html"><button><strong>Memory Matchup</strong></button></a></p>
+            <p class=""><a href="index.html"><button><strong>Home Page</strong></button></a></p>
+
+        </div>
+        </body>
+</html>
+
