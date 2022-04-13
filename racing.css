@@ -1,0 +1,41 @@
+div {
+    background-image: url("https://images.hdqwalls.com/wallpapers/red-lamborghini-aventador-new-pn.jpg");
+    height: 700px;
+    min-height: 120vh;
+    width: 100%;
+    color: black;
+    background-position: 0px;
+    background-size: cover;
+  }
+  h4 {
+    text-align: center;
+    color: white;
+  }
+  
+  h3 {
+    text-align: center;
+    color: white;
+  }
+  a {
+    text-align: center;
+    color: white;
+  }
+  h2 {
+    text-align: center;
+    color: white;
+  }
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  
+  p {
+    text-align: center;
+    color: white;
+  }
+  body {
+    margin: 0;
+    top: 0;
+    background-color: black;
+  }
+  
