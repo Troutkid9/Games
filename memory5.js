@@ -82,7 +82,7 @@ let model = {
     },
     {
       type: "Autumn",
-      image: "autumn.png",
+      image: "autumn.PNG",
     },
     {
       type: "Hunter",
