@@ -74,11 +74,11 @@ let model = {
   cards: [
     {
       type: "James",
-      image: "james.png",
+      image: "james.PNG",
     },
     {
       type: "Abigail",
-      image: "abigail.png",
+      image: "abigail.PNG",
     },
     {
       type: "Cameron",
@@ -90,11 +90,11 @@ let model = {
     },
     {
       type: "Raymond",
-      image: "raymond.png",
+      image: "raymond.PNG",
     },
     {
       type: "Taylor",
-      image: "taylor.png",
+      image: "taylor.PNG",
     },
   ],
   checkUserGuess: function (userGuess) {
