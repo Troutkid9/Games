@@ -1,13 +1,14 @@
 div {
-    background-color: black;
+    background-color: white;
     background-image: url("https://th.bing.com/th/id/R.df7dc7b0b4fb92e8e3b23274f842e6c3?rik=yglqhEeDTjxQrA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fJ3uThO5.jpg&ehk=4W6p0inXDOSy10BDLUgkB63YVPnIkBoineHpILKhaKY%3d&risl=&pid=ImgRaw&r=0");
+	color: white;
 }
 body{
 	padding: 0;
 	margin: 0;	
 	width: 100vw;
 	height: 120vh;
-    color: black;	
+    color: white;	
 }
 .panel{
 	height: 120vh;
@@ -91,7 +92,7 @@ p,
 h2,
 h3 {
     text-align: center;
-    color: black;
+    color: white;
 }
 h1,
 h4 {
