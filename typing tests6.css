@@ -1,0 +1,36 @@
+h4 {
+  text-align: center;
+  text-align: center;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+a {
+  text-align: center;
+  color: white;
+}
+h2 {
+  text-align: center;
+  color: white;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+
+p {
+  text-align: center;
+  color: white;
+}
+body {
+  background-image: url("https://th.bing.com/th/id/OIP.DqrjcSU9AQqbCl6P6m1V7gHaEK?pid=ImgDet&rs=1");
+  margin: 0;
+  top: -4;
+  text-align: center;
+}
+div {
+    color: white;
+}
