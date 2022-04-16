@@ -33,7 +33,7 @@ const colorIncorrectWord = "#e50000";
 
 // Word Count and other data.
 const wordData = {
-  seconds: 60,
+  seconds: 480,
   correct: 0,
   incorrect: 0,
   total: 0,
@@ -109,7 +109,7 @@ function isTimer(seconds) {
   }
 
   // Only set timer once
-  if (time === "1:00" && typingTimer === null) {
+  if (time === "8:00" && typingTimer === null) {
     typingTimer = window.setInterval(() => {
       if (seconds <= 0) {
         window.clearInterval(typingTimer);
@@ -127,7 +127,7 @@ function isTimer(seconds) {
 
 function calculateWPM(data) {
   const { seconds, correct, incorrect, total, typed } = data;
-  const minutes = seconds / 60;
+  const minutes = seconds / 480;
   const wpm = Math.max(0, Math.ceil((typed / 5 - incorrect) / minutes));
   const accuracy = Math.ceil((correct / total) * 100);
 
@@ -217,7 +217,7 @@ function buildTypingTest(id) {
 
       <section id="type-section">
         <input id="typebox" name="typebox" type="text" tabindex="1" autofocus onkeyup="typingTest(event)" />
-        <div id="timer" class="type-btn"><span>1:00</span></div>
+        <div id="timer" class="type-btn"><span>8:00</span></div>
         <button id="restart" class="type-btn" tabindex="2" onclick="restartTest()">
           <span id="restart-symbol">&#8635;</span>
         </button>
