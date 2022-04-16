@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="A simple Hangman word game for one or two players">
+  <title>Hangman</title>
+
+  <!-- Load FontAwesome -->
+  <script src="https://kit.fontawesome.com/6d54e0ab0d.js" crossorigin="anonymous"></script>
+
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <!-- Load stylesheet -->
+  <link rel="stylesheet" href="hangman.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="wrapper">
+      <h1>Hangman Game</h1>
+      
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="wrapper">
+
+      <!-- Category is displayed here -->
+      <div class="category" aria-label="category"></div>
+
+      <!-- Gallows is displayed here -->
+      <div class="gallows" id="gallows">
+        <span class="rope"></span>
+        <span class="horizontalScaffold"></span>
+        <span class="verticalScaffold"></span>
+        <span class="platform"></span>
+        <!-- Body parts appear here -->
+        <div class="body">
+          <span class="head hidden"></span>
+          <span class="torso hidden"></span>
+          <span class="leftArm hidden"></span>
+          <span class="rightArm hidden"></span>
+          <span class="leftLeg hidden"></span>
+          <span class="rightLeg hidden"></span>
+        </div>
+      </div>
+
+      <div class="startButtonContainer">
+        <!-- Buttons to start game -->
+        <button class="onePlayer">One Player</button>
+        <button class="twoPlayers">Two Players</button>
+      </div>
+
+      <!-- Blank spots for correctly guessed letters to appear -->
+      <div class="blank" aria-label="if you guess a correct letter it will appear here"></div>
+
+      <!-- Form to create a question for two player game -->
+      <form action="#" id="questionForm" class="questionForm" autocomplete="off">
+        <label for="categoryInput">Name your category</label>
+        <input type="text" id="categoryInput" placeholder="category" required>
+        <label for="questionInput">Type your word</label>
+        <input type="text" id="questionInput" placeholder="word" required>
+        <button>start!</button>
+        
+      </form>
+
+      <!-- Form to input guesses (one player) -->
+      <form action="#" id="onePlayerGuessForm" class="guessForm" autocomplete="off">
+        <label class="sr-only" for="onePlayerGuessInput">Guess a letter</label>
+        <input id="onePlayerGuessInput" type="text" placeholder="letter" maxlength="1" required>
+        <button>guess</button>
+      </form>
+
+      <!-- Form to input guesses (two players) -->
+      <form action="#" id="twoPlayerGuessForm" class="guessForm" autocomplete="off">
+        <label class="sr-only" for="twoPlayerGuessInput">Guess a letter</label>
+        <input id="twoPlayerGuessInput" type="text" placeholder="letter" maxlength="1" required>
+        <button class="guess">guess</button>
+      </form>
+
+      <!-- Incorrect guesses displayed here -->
+      <div class="wrong" aria-label="if you guess a wrong letter it will appear here"></div>
+
+      <!-- Button to play again. Reloads the page. -->
+      <button class="playAgain hidden">Play again</button>
+
+      <div class=""><a href="index2.html"><button>Home Page 2</button></a></div>
+    </div>
+  </main>
+
+  <!-- Modal for alerts -->
+  <div class="alertModal" id="alertModal">
+    <!-- Text is displayed here -->
+    <div class="alertModalText" id="alertModalText"></div>
+    <!-- Button to close modal -->
+    <button id="ok">ok</button>
+  </div>
+  <div class="alertModalBackground" id="alertModalBackground"></div>
+
+  <!-- Load scripts -->
+  <script src="hangman.js"></script>
+
+
+</body>
+</html>

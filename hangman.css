@@ -1,0 +1,609 @@
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    margin: 0;
+    text-align: relative;
+  }
+  
+  article, aside, footer, header, nav, section {
+    display: block;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: .67em 0;
+  }
+  
+  figcaption, figure, main {
+    display: block;
+  }
+  
+  figure {
+    margin: 1em 40px;
+  }
+  
+  hr {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    height: 0;
+  }
+  
+  pre {
+    font-family: monospace,monospace;
+    font-size: 1em;
+  }
+  
+  a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+  }
+  
+  abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  
+  b, strong {
+    font-weight: inherit;
+  }
+  
+  b, strong {
+    font-weight: bolder;
+  }
+  
+  code, kbd, samp {
+    font-family: monospace,monospace;
+    font-size: 1em;
+  }
+  
+  dfn {
+    font-style: italic;
+  }
+  
+  mark {
+    background-color: #ff0;
+    color: #000;
+  }
+  
+  small {
+    font-size: 80%;
+  }
+  
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -.25em;
+  }
+  
+  sup {
+    top: -.5em;
+  }
+  
+  audio, video {
+    display: inline-block;
+  }
+  
+  audio:not([controls]) {
+    display: none;
+    height: 0;
+  }
+  
+  img {
+    border-style: none;
+    align-items: center;
+  }
+  
+  svg:not(:root) {
+    overflow: hidden;
+  }
+  
+  button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+  }
+    
+  button, select {
+    text-transform: none;
+  }
+  
+  button, html [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button;
+  }
+  
+  button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  fieldset {
+    padding: .35em .75em .625em;
+  }
+  
+  legend {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+  }
+  
+  progress {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  [type=checkbox], [type=radio] {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+  }
+  
+  [type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  [type=search] {
+    -webkit-appearance: textfield;  
+    }
+  
+  [type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+  }
+  
+  details, menu {
+    display: block;
+  }
+  
+  summary {
+    display: list-item;
+  }
+  
+  canvas {
+    display: inline-block;
+  }
+  
+  template {
+    display: none;
+  }
+  
+  [hidden] {
+    display: none;
+  }
+  
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: '';
+    clear: both;
+    height: 0;
+  }
+  
+  html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .visible {
+    color: #000000;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .questionFormVisible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  body {
+    cursor: default;
+    background-color: #f5f5f5;
+    text-align: relative;
+  }
+  
+  body,
+  input,
+  button {
+    text-transform: uppercase;
+    font-family: "Permanent Marker", cursive;
+  }
+  
+  .wrapper {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1440px;
+  }
+  
+  button {
+    font-size: 1.7rem;
+    background: #000000;
+    color: #FFFF00;
+    border: none;
+    padding: 10px;
+    -webkit-box-shadow: 5px 10px;
+            box-shadow: 5px 10px;
+  }
+  
+  button:hover,
+  button:focus {
+    cursor: pointer;
+    color: #000000;
+    background: #FFFF00;
+  }
+  
+  button:active {
+    -webkit-box-shadow: 2px 5px;
+            box-shadow: 2px 5px;
+  }
+  
+  a {
+    color: #000000;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  .startButtonContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 212px;
+    position: relative;
+    top: 310px;
+    left: 50px;
+  }
+  
+  .onePlayer {
+    margin-bottom: 20px;
+  }
+  
+  .gallows,
+  .platform,
+  .horizontalScaffold {
+    width: 100px;
+  }
+  
+  .platform,
+  .verticalScaffold,
+  .horizontalScaffold,
+  .rope {
+    display: block;
+  }
+  
+  .platform,
+  .verticalScaffold,
+  .horizontalScaffold,
+  .rope {
+    position: absolute;
+    background: #000000;
+  }
+  
+  .gallows {
+    position: absolute;
+    left: 35px;
+    top: 120px;
+  }
+  
+  .platform {
+    left: 20px;
+    top: 250px;
+    height: 5px;
+  }
+  
+  .verticalScaffold {
+    left: 70px;
+    height: 250px;
+    width: 5px;
+  }
+  
+  .horizontalScaffold {
+    left: 70px;
+    height: 5px;
+  }
+  
+  .rope {
+    left: 165px;
+    height: 40px;
+    width: 2px;
+  }
+  
+  .head,
+  .torso,
+  .leftArm,
+  .rightArm,
+  .leftLeg,
+  .rightLeg {
+    position: absolute;
+  }
+  
+  .torso,
+  .leftArm,
+  .rightArm,
+  .leftLeg,
+  .rightLeg {
+    background: #000000;
+    width: 4px;
+  }
+  
+  .head {
+    left: 145px;
+    top: 40px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: 4px solid #000000;
+  }
+  
+  .torso {
+    left: 165px;
+    top: 77px;
+    height: 70px;
+  }
+  
+  .leftArm {
+    left: 157px;
+    top: 85px;
+    height: 50px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  
+  .rightArm {
+    left: 173px;
+    top: 85px;
+    height: 50px;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  
+  .leftLeg {
+    left: 155px;
+    top: 143px;
+    height: 60px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  
+  .rightLeg {
+    left: 175px;
+    top: 143px;
+    height: 60px;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  
+  h2,
+  .blank,
+  .guessForm input,
+  .wrong {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    text-shadow: 2px 2px #FFFF00;
+  }
+  
+  .blank {
+    margin-top: 320px;
+    margin-bottom: 50px;
+  }
+  
+  .letterSpace {
+    color: transparent;
+    border-bottom: 3px solid #000000;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-size: 3px;
+  }
+  
+  .correct {
+    font-size: 2rem;
+  }
+  
+  form {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .questionForm {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+  
+  .questionForm input {
+    margin-bottom: 20px;
+  }
+  
+  .questionForm label {
+    margin-bottom: 10px;
+  }
+  
+  .guessForm input {
+    border: none;
+    text-align: center;
+    width: 150px;
+  }
+  
+  .wrong {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 320px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .wrong p {
+    margin: 0;
+    color: #FF0000;
+    margin-right: 10px;
+  }
+  
+  .alertModal {
+    width: 300px;
+    text-align: center;
+    z-index: 20;
+    padding: 20px;
+    overflow: auto;
+    background: #FFFFFF;
+    top: 50%;
+    visibility: hidden;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    position: fixed;
+    border: 5px solid #FFFF00;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 1.2rem;
+  }
+  
+  .alertModal button {
+    margin-top: 10px;
+  }
+  
+  .alertModal.visibleModal {
+    visibility: visible;
+    -webkit-animation-name: slideIn;
+            animation-name: slideIn;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+  }
+  
+  /* Modal Animation */
+  @-webkit-keyframes slideIn {
+    from {
+      top: -800px;
+    }
+  }
+  @keyframes slideIn {
+    from {
+      top: -800px;
+    }
+  }
+  
+  .alertModalBackground {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    visibility: hidden;
+  }
+  
+  .alertModalBackground.visibleModal {
+    visibility: visible;
+  }
+  
+  .playAgain {
+    margin-bottom: 50px;
+  }
+ 
+  
+  footer {
+    font-size: 1rem;
+  }
+  
+  @media (min-width: 500px) {
+    .gallows {
+      left: 200px;
+    }
+    .startButtonContainer {
+      left: 200px;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .gallows {
+      left: 400px;
+    }
+    .startButtonContainer {
+      left: 400px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .gallows {
+      left: 630px;
+    }
+    .startButtonContainer {
+      left: 620px;
+    }
+  }
