@@ -56,7 +56,7 @@ const Questions = [
     a: [
       { text: "Darth Malgus", isCorrect: true },
       { text: "Darth Vader", isCorrect: false },
-      { text: "Darth Nihlus", isCorrect: false },
+      { text: "Darth Nihilus", isCorrect: false },
       { text: "Darth Sidious", isCorrect: false },
     ],
   },
@@ -186,7 +186,7 @@ const Questions = [
     a: [
       { text: "StarKiller", isCorrect: false },
       { text: "Darth Plagueis", isCorrect: false },
-      { text: "Darth Nihlus", isCorrect: true },
+      { text: "Darth Nihilus", isCorrect: true },
       { text: "Darth Atrius", isCorrect: false },
     ],
   },
