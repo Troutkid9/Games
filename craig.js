@@ -180,6 +180,16 @@ const Questions = [
       { text: "Alexander", isCorrect: false },
     ],
   },
+  {
+    id: 18,
+    q: "Who is My Favorite Sith Lord From Star Wars?",
+    a: [
+      { text: "Darth Revan", isCorrect: false },
+      { text: "Darth Vader", isCorrect: false },
+      { text: "Darth Malgus", isCorrect: true },
+      { text: "Darth Andeddu", isCorrect: false },
+    ],
+  },
 ];
 
 // Set start
