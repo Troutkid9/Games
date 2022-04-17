@@ -78,7 +78,7 @@ let model = {
     },
     {
       type: "Wonder Woman",
-      image: "wonder Woman.png",
+      image: "wonder woman.png",
     },
     {
       type: "Captain America",
