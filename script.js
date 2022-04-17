@@ -19,8 +19,8 @@ racketPosYPlayer1 = ch / 2 - racketHeight / 2;
 const racketPosXPlayer2 = 1320 - racketWidth;
 racketPosYPlayer2 = ch / 2 - racketHeight / 2;
 
-let ballSpeedX = 4;
-let ballSpeedY = 4;
+let ballSpeedX = 5;
+let ballSpeedY = 5;
 
 let speedUpBy = 0.001; // speed multiplied every ball bounce
 
@@ -51,8 +51,8 @@ document.body.onkeyup = function (e) {
     if (!game_running) {
       ballX = cw / 2;
       ballY = ch / 2;
-      ballSpeedX = 1;
-      ballSpeedY = 1;
+      ballSpeedX = 5;
+      ballSpeedY = 5;
       game_running = true;
       interval = setInterval(game, 1000 / 60);
     }
