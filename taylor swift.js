@@ -139,7 +139,7 @@
       correctAnswer: "c",
     },
     {
-      question: "8: What Was the Title of Taylor Swift's Album",
+      question: "8: What Was the Title of Taylor Swift's First Album?",
       answers: {
         a: "Fearless",
         b: "Speak Now",
