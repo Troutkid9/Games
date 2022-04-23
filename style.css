@@ -1,6 +1,6 @@
 
 /* Reset */
-html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 
 	margin:0;
 
@@ -12,10 +12,11 @@ html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acro
 
 	vertical-align:baseline;
 
-    color: black;
+    color: white;
 
     font-family: cursive;
 
+	text-align: center;
 }
 
 h1, 
@@ -29,10 +30,17 @@ h6 {
 
 	vertical-align:baseline;
 
-    color: black;
+	color: white;
 
     font-family: cursive;
 
+	text-align: center;
+
+}
+
+p,
+strong {
+	color: black;
 }
 
 a {
@@ -45,7 +53,9 @@ body{
 	color: #333;
 	font-size: 15px;
 	line-height: 20px;
-	background-color: black;
+	background-color: white;
+	text-align: center;
+	background-image: url("https://media.istockphoto.com/photos/red-cowhide-suede-texture-with-vignette-full-frame-picture-id1172242403?k=6&m=1172242403&s=612x612&w=0&h=HB6pJOoagLQwGHUEGEv5guEfHJNVU-vFz9VjxYRs33Y=");
 }
 
 .clear{
@@ -55,7 +65,7 @@ body{
 .page{
 	width: 960px;
 	margin: 0 auto;
-	background-color: darkcyan;
+	background-image: url("https://media.istockphoto.com/vectors/vector-poker-black-background-playing-card-symbols-pattern-blackjack-vector-id868429174?k=6&m=868429174&s=612x612&w=0&h=4hGMxT-mUXDTEVTiWnogDku8TEcuCVwbM1roL6rD-TY=");
 	min-height: 500px;
 	text-align: center;
 }
