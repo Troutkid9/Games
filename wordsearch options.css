@@ -1,0 +1,22 @@
+div {
+    background-image: url("https://th.bing.com/th/id/R.758893b88ca2c50a85e39247ae9efa72?rik=ola%2fwQzQ9NhKow&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f9VpgcMD.jpg&ehk=LIhiq3JyusbyF49ZGAC6J1eSRViTkXOOUNnkwM08fpA%3d&risl=&pid=ImgRaw&r=0");
+    height: 700px;
+    min-height: 120vh;
+    width: 100%;
+    color: white;
+    background-position: 0px;
+    background-size: cover;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: white;
+    font-family: cursive;
+    text-align: center;
+  }
+  body {
+    margin: 0;
+    top: 0;
+  }

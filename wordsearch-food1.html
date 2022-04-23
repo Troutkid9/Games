@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Word Search Game - Food</title>
+    <link rel="stylesheet" href="wordsearch-food1.css" />
+    <link rel="stylesheet" href="wordsearch-food-1.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1 class="logo">Word search: food</h1>
+      <section id="ws-area"></section>
+      <ul class="ws-words"></ul>
+    </div>
+    <script src="wordsearch-food-1.js"></script>
+    <script src="wordsearch-food.js"></script>
+    <script type="text/javascript">
+      var gameAreaEl = document.getElementById('ws-area');
+      var gameobj = gameAreaEl.wordSearch();
+
+      // Put words into `.ws-words`
+      var words = gameobj.settings.wordsList,
+        wordsWrap = document.querySelector('.ws-words');
+      for (i in words) {
+        var liEl = document.createElement('li');
+        liEl.setAttribute('class', 'ws-word');
+        liEl.innerText = words[i];
+        wordsWrap.appendChild(liEl);
+      }
+    </script>
+    <h4>Restart</h4>
+    <p class=""><a href="wordsearch-friends1.html"><button><strong>Restart</strong></button></a></p>
+    <h4>Home Page</h4>
+    <p class=""><a href="index.html"><button><strong>Page 3</strong></button></a></p>
+  </body>
+</html>

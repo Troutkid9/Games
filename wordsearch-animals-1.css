@@ -1,0 +1,67 @@
+/* CSS reset */
+
+body, h2 {
+  text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: darkblue;
+    font-family: cursive;
+  }
+  
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  body {
+    text-align: center;
+    color: white;
+    font-family: cursive;
+  }
+  
+  /* Common */
+  
+  .fix {
+    *zoom: 1;
+  }
+  
+  .fix:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  
+  /* Home */
+  
+  .wrap {
+    width: 960px;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+    position:relative;
+  }
+  
+  .logo, #gameArea {
+    margin-bottom: 40px;
+  }
+  
+  .ws-area, .ws-words {
+    display: inline-block;
+    vertical-align: top;
+    color: darkblue
+  }
+  
+  .ws-words {
+    margin-left: 20px;
+    text-align: left;
+    color: white;
+    font-family: cursive;
+  }
+  
+  .ws-word {
+    margin-bottom: 4px;
+  }
+  
+  .ws-words ::first-letter{
+      text-transform : capitalize;
+  }
