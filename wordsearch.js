@@ -25,8 +25,8 @@
     // Default settings
     var default_settings = {
       directions: ["W", "N", "WN", "EN"],
-      gridSize: 10,
-      words: ["one", "two", "three", "four", "five"],
+      gridSize: 20,
+      words: ["Giants", "Buccaneers", "Patriots", "Jaguars", "Steelers", "Packers", "Cheifs", "Cowboys"],
       wordsList: [],
       debug: false,
     };
