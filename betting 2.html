@@ -1,0 +1,170 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/mainstyle.css"/>
+    <script src="js/race.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/screenTransition.js"></script>
+    <title>Trucker Template</title>
+</head>
+
+<body>
+
+<!-- Playing game start -->
+<div class="row" id="mainScreen">
+    <div class="row">
+        <center><h2>Racing Betting Game</h2></center>
+        <center><h4>Good Luck! I Hope You Win! Don't Spend All Your Money!</h4></center>
+    </div>
+    <div class="row">
+        <center>
+            <button id="resetbtn" type="button" class="btn btn-primary">Reset</button>
+        </center>
+    </div>
+    <div class="row">
+        <center>
+            <div id="msgDiv" class="message"></div>
+        </center>
+    </div>
+    <div class="row">
+        <div id="playGame">
+            <div class="container">
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-8">
+                    <center>
+                        <button type="button" class="btn btn-primary" onclick="modalSetup()" data-toggle="modal"
+                                data-target="#placeBet">Place
+                            Bet
+                        </button>
+                        <button type="button" id="startRaceBtn" onClick="raceStart()" disabled="false"
+                                class="btn btn-primary">Start Race
+                        </button>
+                    </center>
+                </div>
+                <div class="col-4">
+                    <div id="initialFund" style="float: right"></div>
+                    <i id="setRight" class="fa fa-user-secret" aria-hidden="true"></i>
+                    <div id="playerN" style="float: right"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+<!-- Playing game end -->
+
+
+<!-- Placing Bet start -->
+<!-- Modal -->
+<div class="modal fade" id="placeBet" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Place Bet</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal truckForm">
+                    <div class="form-group truckBets">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Placing Bet end -->
+
+
+<!-- Game set up start -->
+</br></br></br></br>
+<center><h2>Racing, Betting Game Setup Page</h2></center>
+<center><h4>Good Luck! I Hope You Win! Don't Spend All Your Money!</h4></center>
+<center><h4>Choose How Many Cars You Want, Your Money For Bets, and Your Username!</h4></center>
+<div class="row" id="gameSetUpOnreset">
+    <div class="panel panel-default">
+        <div class="panel-heading">Game Setup</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-2">&nbsp;</div>
+                <div class="col-8">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="playerName">Player Name</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="playerName" placeholder="Player Name"
+                                       name="playerName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Number Of Truckers</label>
+                            <!-- Example single danger button -->
+                            <div class="col-sm-6">
+                                <select class="form-control" id="noOfTrucks">
+                                    <option>Choose number of truckers</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="initialFunds">Initial Funds</label>
+                            <div class="col-sm-6">
+                                <input type="number" class="form-control" id="initialFunds" placeholder="$1000"
+                                       value="1000" min="1"
+                                       oninput="validity.valid||(value='');" name="initialFunds">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <center>
+                                <div class="col-sm-offset-2 col-sm-8">
+                                    <button type="button" onClick="resetRace()" class="btn-lg btn-danger"
+                                            data-dismiss="modal">Start Game
+                                    </button>
+                                </div>
+                            </center>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-2">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Game set up end -->
+
+<h4>Home Page</h4>
+<p class=""><a href="index.html"><button><strong>Page 3</strong></button></a></p>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+body {
+    background-color: black;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1,
+h2,
+h3,
+h4,
+div,
+p {
+    color: white;
+    font-family: cursive;
+    background-color: black;
+}
+
+#gameSetUp {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fa-truck {
+    font-size: 50px;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+
+.fa-user-secret {
+    font-size: 80px;
+    color: white;
+}
+
+.track {
+    height: 50px;
+    background-image: url('../images/track.png');
+}
+
+.container {
+    margin: 20px auto;
+    padding: 0 50px 0 0;
+    width: 80%;
+    background: url('../images/racing-stripes.jpg') repeat-y 100% 0;
+}
+
+#setRight {
+    float: right;
+}
+
+.message {
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#gameSetUpOnreset {
+    display: none;
+}
+
+#truck0 {
+    color: cyan;
+}
+
+#truck1 {
+    color: blue;
+}
+
+#truck2 {
+    color: green;
+}
+
+#truck3 {
+    color: purple;
+}
+
+#truck4 {
+    color: red;
+}
+
+#truck5 {
+    color: yellow;
+}
+
+#truck6 {
+    color: silver;
+}
+
+#truck7 {
+    color: whitesmoke;
+}

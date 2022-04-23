@@ -1,0 +1,15 @@
+body {
+    background-image: url("https://th.bing.com/th/id/R.336d9449be4ca2cc3dbcca724e230d34?rik=VuAcXDYLYG8zWQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fbO3h25C.jpg&ehk=otmQpQkrs7iI7lY0Nay0w%2bZRWWUefo%2fGjymK99FZqq4%3d&risl=&pid=ImgRaw&r=0");
+    text-align: center;
+    color: white;
+}
+h1,
+h2,
+h3,
+h4,
+div,
+p {
+    text-align: center;
+    color: white;
+    font-family: cursive;
+}
