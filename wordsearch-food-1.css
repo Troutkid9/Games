@@ -31,6 +31,7 @@ body, h2 {
     display: table;
     clear: both;
     content: '';
+    color: black;
   }
   
   /* Home */
@@ -41,16 +42,19 @@ body, h2 {
     padding: 40px 0;
     text-align: center;
     position:relative;
+    color: black;
   }
   
   .logo, #gameArea {
     margin-bottom: 40px;
+    color: black;
   }
   
   .ws-area, .ws-words {
     display: inline-block;
     vertical-align: top;
-    color: darkblue
+    color: darkblue;
+    color: black;
   }
   
   .ws-words {
@@ -62,8 +66,10 @@ body, h2 {
   
   .ws-word {
     margin-bottom: 4px;
+    color: black;
   }
   
   .ws-words ::first-letter{
-      text-transform : capitalize;
+    text-transform : capitalize;
+    color: black;
   }
