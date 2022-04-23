@@ -4,7 +4,7 @@ body, h2 {
   text-align: center;
     margin: 0;
     padding: 0;
-    background-color: darkblue;
+    background-color: aqua;
     font-family: cursive;
   }
   
@@ -15,7 +15,7 @@ body, h2 {
   
   body {
     text-align: center;
-    color: white;
+    color: black;
     font-family: cursive;
   }
   
