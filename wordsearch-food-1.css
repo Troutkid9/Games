@@ -6,11 +6,13 @@ body, h2 {
     padding: 0;
     background-color: aqua;
     font-family: cursive;
+    color: black;
   }
   
   h1 {
     text-align: center;
     text-transform: uppercase;
+    color: black;
   }
   
   body {
