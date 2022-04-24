@@ -45,12 +45,12 @@ strong {
 
 a {
 	text-decoration: none;
-	color: #06C;
+	color: white;
 }
 
 body{
 	font-family: Arial, Helvetica, sans-serif;
-	color: #333;
+	color: white;
 	font-size: 15px;
 	line-height: 20px;
 	background-color: white;
@@ -68,18 +68,22 @@ body{
 	background-image: url("https://media.istockphoto.com/vectors/vector-poker-black-background-playing-card-symbols-pattern-blackjack-vector-id868429174?k=6&m=868429174&s=612x612&w=0&h=4hGMxT-mUXDTEVTiWnogDku8TEcuCVwbM1roL6rD-TY=");
 	min-height: 500px;
 	text-align: center;
+	color: white;
 }
 
 .dealer-cards .card, .player-cards .card {
 	margin-left: 5px;
+	color: white;
 }
 
 .dealer-cards .card:first-child, .player-cards .card:first-child{
 	margin-left: 0;
+	color: white;
 }
 
  .new-cards .card:first-child{
 	margin-left: 5px;
+	 color: white;
 }
 
 .dealer-cards, .player-cards{
@@ -96,6 +100,7 @@ body{
  .buttons{
 	width: 210px; 
 	margin: 20px auto 0 auto;
+	 color: white;
  }
 
 .flipped{
