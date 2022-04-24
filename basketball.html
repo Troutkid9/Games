@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Set Shooter</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/style.css" type="text/css">
+        <link rel="icon" type="image/png" href="./assets/images/basketball.png">
+    </head>
+    <body>
+        <main>
+            <div class="info-container">
+                <div class="instructions">
+                    <h2>How to Play</h2>
+                    <p>Left/right arrow keys to move player</p>
+                    <p>Up/down arrow keys to change shot angle</p>
+                    <p>Press and hold space to shoot</p>
+                </div>
+                <div class="left-footer">
+                    <div class="links">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="game-container">
+                <video id="background-video" src="assets/images/background.mp4" loop autoplay type="video/mp4" width="1024" height="578"></video>
+                <canvas id="canvas" width="1024px" height="650px">
+                </canvas>
+                <div class="start-screen">
+                    <div class="game-info">
+                        <h1 class="game-title">Set Shooter</h1>
+                        <div class="play-button-container">
+                            <button id="play-button">Play</button>
+                        </div>
+                        <p class="game-description">Make as many shots as you can without missing! Game over on 3 misses.</p>
+                    </div>
+                </div>
+                <div class="end-screen hidden">
+                    <div class="end-info">
+                        <h1 class="game-title">Set Shooter</h1>
+                        <h2>Game Over</h2>
+                        <div class="play-button-container">
+                            <button id="play-again-button">Play Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="./lib/dist/main.js"></script>
+    </body>
+</html>

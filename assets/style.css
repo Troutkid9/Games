@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: Oswald;
+    background: black;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a {
+    color: inherit;
+}
+
+a:visited {
+    color: white;
+}
+
+.info-container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-container {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#canvas {
+    margin: 0 auto;
+}
+
+#background-video {
+    position: absolute;
+    z-index: -5;
+}
+
+.start-screen, .end-screen {
+    position: absolute;
+    top: 0;
+    width: 1024px;
+    height: 768px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hidden {
+    display: none; 
+}
+
+.game-info, .end-info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-title {
+    font-family: Oswald;
+    text-align: center;
+    color: rgba(255, 255, 255);
+    font-size: 48px;
+    margin: 20px 0;
+    margin-bottom: 80px;
+}
+
+.end-info h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.play-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#play-button, #play-again-button {
+    border: 2px solid white;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow: none;
+    
+    height: 48px;
+    font-family: inherit;
+}
+
+#play-button {
+    width: 80px;
+}
+
+#play-again-button {
+    width: 160px;
+}
+
+#play-button:hover, #play-again-button:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+    background: white;
+    border: 2px solid black;
+}
+
+#play-button:focus, #play-again-button:focus {
+    outline: none;
+}
+
+.game-description, .game-over-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 28px;
+    text-align: center;
+}
+
+.background-credit {
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    justify-content: center
+}
+
+.links i {
+    font-size: 32px;
+    margin: 0 24px;
+}
+
+.links a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.fas, .fab {
+    color: white;
+}
