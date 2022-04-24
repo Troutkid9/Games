@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Golf Game</title>
+    <link rel="stylesheet" type="text/css" href="golf.css" />
+  </head>
+  <body>
+      <h1>Golf Game</h1>
+    <pre></pre>
+    <canvas id="canvas" width="620" height="550"></canvas>
+    <div id="score">
+      Hole Number:
+      <div id="hole">1</div>
+      Shots Taken:
+      <div id="shots">0</div>
+      Average Number of Shots Per Hole:
+      <div id="per-hole">0</div>
+    </div>
+
+  <script id="vshader" type="text/glsl">
+    attribute vec2 a_position;
+    uniform mat3 u_matrix;
+    uniform float u_pointSize;
+
+    void main() {
+        vec2 a_pos = (u_matrix * vec3(a_position, 1)).xy;
+        a_pos = a_pos * 2.0 - 1.0;
+        gl_Position = vec4(a_pos, 0, 1);
+        gl_PointSize = u_pointSize;
+    }
+  </script>
+
+  <script id="fshader" type="text/glsl">
+    precision mediump float;
+    uniform vec3 u_color;
+    uniform sampler2D u_texture;
+    uniform bool u_useTexture;
+
+    void main() {
+        if (u_useTexture)
+            gl_FragColor = texture2D(u_texture, gl_PointCoord);
+        else
+            gl_FragColor = vec4(u_color, 1.0);
+    }
+  </script>
+
+  <script data-main="scripts/game" src="scripts/require.js"></script>
+</body>
+</html>
