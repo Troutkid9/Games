@@ -1,0 +1,54 @@
+body {
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+}
+
+.container {
+    color: darkblue;
+    display: flex;
+    align-items: center;
+    margin-left: 500px;
+  }
+  
+  
+  .grid {
+    align-items: center;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid div {
+    background-color: darkblue;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+  }
+  
+  .tetromino {
+    align-items: center;
+    background-color: blue;
+  }
+  
+  
+  .mini-grid {
+    align-items: center;
+    margin-left: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darkblue;
+  }
+  
+  .mini-grid div {
+    align-items: center;
+    height: 20px;
+    width: 20px;
+  }
+
+  
