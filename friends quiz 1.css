@@ -1,14 +1,12 @@
 body{
 	font-size: 20px;
 	font-family: cursive;
-        text-align: center;
 	color: aqua;
 	background-image: url("friends.png");
 }
 .question{
-        color: white;
+    color: white;
 	font-weight: 600;
-        text-align: center;
 }
 .answers {
   margin-bottom: 20px;
