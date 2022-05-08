@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="yahtzee 3.css">
+    <title>Yahtzee!</title>
+</head>
+<body>
+    <h1>Maggie's Yahtzee</h1>
+    <class="container">
+        <h4>Your Dice</h4>
+    <div class="left">
+        <div class="flexCenter">
+            <ul style="list-style: none;">
+                <h4>What to Submit</h4>
+                <li><button class="submitButton" id="submitOnes">Submit Ones</button></li>
+                <br>
+                <li><button class="submitButton" id="submitTwos">Submit Twos</button></li>
+                <br>
+                <li><button class="submitButton" id="submitThrees">Submit Threes</button></li>
+                <br>
+                <li><button class="submitButton" id="submitFours">Submit Fours</button></li>
+                <br>
+                <li><button class="submitButton" id="submitFives">Submit Fives</button></li>
+                <br>
+                <li><button class="submitButton" id="submitSixes">Submit Sixes</button></li>
+                <br>
+                <li><button class="submitButton" id="submitThreeOfAKind">Submit Three of a Kind</button></li>
+                <br>
+                <li><button class="submitButton" id="submitFourOfAKind">Submit Four of a Kind</button></li>
+                <br>
+                <li><button class="submitButton" id="submitSmallStraight">Submit Small Straight</button></li>
+                <br>
+                <li><button class="submitButton" id="submitLargeStraight">Submit Large Straight</button></li>
+                <br>
+                <li><button class="submitButton" id="submitFullHouse">Submit Full House</button></li>
+                <br>
+                <li><button class="submitButton" id="submitChance">Submit Chance</button></li>
+                <br>
+                <li><button class="submitButton" id="submitYahtzee">Submit Yahtzee</button></li>
+            </ul>
+        </div> 
+    </div>
+    <div class="right">
+        <h4>What You've Submitted and Scores</h4>
+        <div class="flexCenter">
+            <ul style="list-style: none;" id="scoreLabels">
+                <li id="totalScoreText"><strong>TOTAL SCORE: 0 </strong></li>
+                <hr>
+                <br>
+                <li id="totalOnesText">Ones: 0 </li>
+                <li id="totalTwosText">Twos: 0 </li>
+                <li id="totalThreesText">Threes: 0 </li>
+                <li id="totalFoursText">Fours: 0 </li>
+                <li id="totalFivesText">Fives: 0 </li>
+                <li id="totalSixesText">Sixes: 0 </li>
+                <li id="totalThreeOfAKindText">Three of a Kind: 0 </li>
+                <li id="totalFourOfAKindText">Four of a Kind: 0 </li>
+                <li id="totalSmallStraightText">Small Straight: 0 </li>
+                <li id="totalLargeStraightText">Large Straight: 0 </li>
+                <li id="totalFullHouseText">Full House: 0 </li>
+                <li id="totalChanceText">Chance: 0 </li>
+                <li id="totalYahtzeeText">Yahtzee: 0 </li>
+                <br>
+                <li id="totalSubtotalText"><i>Subtotal: 0 </i></li>
+                <br>
+                <li><button class="submitButton" id="addSubtotalButton">Add Subtotal Bonus</button></li>
+            </ul>
+        </div> 
+    </div>
+        <div class="flexCenter">
+            <div class="center">
+                <div class="flexCenter">
+                    <img class="dicePics" id="dicePic1" src="images/dice1.png">
+                    <img class="dicePics" id="dicePic2" src="images/dice1.png">
+                    <img class="dicePics" id="dicePic3" src="images/dice1.png">
+                    <img class="dicePics" id="dicePic4" src="images/dice1.png">
+                    <img class="dicePics" id="dicePic5" src="images/dice1.png">
+                </div>
+                <h4>Hold Options</h4>
+                <div class="flexCenter">
+                    <button class="holdButton" id="holdButton1">Hold</button>
+                    <button class="holdButton" id="holdButton2">Hold</button>
+                    <button class="holdButton" id="holdButton3">Hold</button>
+                    <button class="holdButton" id="holdButton4">Hold</button>
+                    <button class="holdButton" id="holdButton5">Hold</button>
+                </div>
+                <div class="flexCenter">
+                    <button class="holdUnholdButtons" id="holdAllButton">Hold all</button>
+                    <button class="holdUnholdButtons" id="unholdAllButton">Unhold all</button>
+                </div>
+                <br>
+                <br>
+                <div class="flexCenter">
+                    <button class="rollAndResetButtons" id="rollDice">Roll Dice</button>
+                    <button class="rollAndResetButtons" id="resetRolls">Reset Rolls</button>
+                </div>
+                <br>
+                <br>
+                <div class="flexCenter">
+                    <button class="otherButtons" id="resetGame">Reset Game</button>
+                </div>
+                <div class="flexCenter">
+                    <p class="otherButtons"><a href="yahtzee 3.html"><button>Restart Game</button></a></p>
+                </div>
+                <div class="flexCenter">
+                    <p class="otherButtons"><a href="yahtzee options.html"><button>Yahtzee Options</button></a></p>
+                </div>
+
+
+                <div class="flexCenter">
+                    <p1 class="backgroundDiceVal" id="diceValue1">0</p1>
+                    <p1 class="backgroundDiceVal" id="diceValue2">0</p1>
+                    <p1 class="backgroundDiceVal" id="diceValue3">0</p1>
+                    <p1 class="backgroundDiceVal" id="diceValue4">0</p1>
+                    <p1 class="backgroundDiceVal" id="diceValue5">0</p1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="yahtzee 3.js"></script>
+</body>
+</html>

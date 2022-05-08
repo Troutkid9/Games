@@ -1,0 +1,128 @@
+body {
+    color: darkred;
+    text-align: center;
+    font-family: cursive;
+    background-color: deepskyblue;
+    background-image: url("sky.jpg");
+    color: black;
+}
+.container {
+    width: 1000px;
+    margin:auto;
+ }
+
+.left {
+    float: left;
+    border: 1px;
+    width: 20%;
+}
+
+.right {
+    float: right;
+    padding-right: 20px;
+    border: 1px;
+    width: 20%;
+}
+
+.center {
+    display:inline-block;
+    justify-content: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dicePics {
+    width: 90px;
+    margin: 3px;
+}
+
+.diceVals {
+    margin-right: 30px;
+}
+
+.holdButton {
+    margin: 28px;
+    background-color: darkred; 
+    color: white;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    width: 40px;
+}
+
+.rollAndResetButtons {
+    margin: 6px;
+    background-color: darkred; 
+    color: white;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.submitButton {
+    background-color: darkred; 
+    color: white;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+.submitButton:hover {
+      background-color: white;
+}
+
+.otherButtons {
+    background-color: darkred;
+    color: white;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.otherButtons:hover {
+    background-color: white;
+}
+
+.rollAndResetButtons:hover {
+    background-color: white;
+}
+
+.holdButton:hover {
+    background-color: white;
+}
+
+#scoreLabels {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.backgroundDiceVal {
+    color: black;
+}
+
+.holdUnholdButtons {
+    background-color: darkred;
+    color: white;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.holdUnholdButtons:hover {
+    background-color: white;
+}
