@@ -2,14 +2,13 @@
   border: 1px solid red;
 } */
 
-
-
 body {
     font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
     margin: 0px;
     background-color: blue;
     color: white;
     border: 5px solid black;
+    background-image: url("OIP.jpg");
   }
   
   a {
@@ -63,6 +62,7 @@ body {
     width: 200px;
     margin: 5px;
     border: 5px ridge black;
+    background-color: darkred;
     /* justify-content: space-around; */
   }
   
