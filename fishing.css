@@ -1,0 +1,12 @@
+body {
+    background-image: url("css/OIP.jpg");
+    text-align: center;
+}
+button {
+    height: 30px;
+    width: 100px;
+    border-radius: 90%;
+    background-color: ivory;
+    border-color: ivory;
+    border-width: 4px;
+  }
