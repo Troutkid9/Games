@@ -1,6 +1,7 @@
     /* CSS Code */
     /* Heading */
 body {
+  color: white;
   background-image: url("black wood.jpg");
 }
     h1 {
@@ -61,7 +62,7 @@ body {
     }
 
     div {
-        color: white;
+        color: black;
         align-items: center;    
     }
     
