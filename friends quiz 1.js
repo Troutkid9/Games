@@ -266,7 +266,7 @@
         c: "We All Like a Sport",
         d: "All of the Above",
       },
-      correctAnswer: "a",
+      correctAnswer: "d",
     },
   ];
 
