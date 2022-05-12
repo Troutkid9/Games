@@ -1,7 +1,7 @@
 div {
     background-image: url("");
     background-color: darkblue;
-    height: 5000px;
+    height: 100%;
     min-height: 120vh;
     width: 100%;
     color: white;
