@@ -1,31 +1,32 @@
 div {
     background-image: url("");
+    background-color: darkblue;
     height: 700px;
     min-height: 120vh;
     width: 100%;
-    color: darkblue;
+    color: white;
     background-position: 0px;
     background-size: cover;
   }
   h4 {
-    color: black;
+    color: white;
   }
   
   h3 {
-    color: black;
+    color: white;
   }
   a {
-    color: black;
+    color: white;
   }
   h2 {
-    color: black;
+    color: white;
   }
   h1 {
-    color: black;
+    color: white;
   }
   
   p {
-    color: black;
+    color: white;
   }
   body {
     margin: 0;
