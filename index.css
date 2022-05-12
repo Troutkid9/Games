@@ -1,9 +1,9 @@
 div {
     background-image: url("");
     background-color: darkblue;
-    height: 120%;
+    height: 900px;
     min-height: 120vh;
-    width: 900px;
+    width: 1000px;
     color: white;
     background-position: 0px;
     background-size: cover;
