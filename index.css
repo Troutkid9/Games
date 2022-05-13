@@ -2,30 +2,30 @@ body {
     height: 900px;
     min-height: 120vh;
     width: 1000px;
-    color: white;
+    color: black;
     background-position: 0px;
     background-size: cover;
     margin: 0;
     top: 0;
   }
   h4 {
-    color: white;
+    color: black;
   }
   
   h3 {
-    color: white;
+    color: black;
   }
   a {
-    color: white;
+    color: black;
   }
   h2 {
-    color: white;
+    color: black;
   }
   h1 {
-    color: white;
+    color: black;
   }
   
   p {
-    color: white;
+    color: black;
   }
  
