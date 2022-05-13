@@ -1,29 +1,32 @@
 body {
-    background-color: darkblue;
-    color: white;
+    background-color: lightblue;
+    color: black;
   }
+
   h4 {
-    color: white;
+    color: black;
   }
   
   h3 {
-    color: white;
+    color: black;
   }
   a {
-    color: white;
+    color: black;
   }
+
   h2 {
-    color: white;
+    color: black;
   }
+
   h1 {
-    color: white;
+    color: black;
   }
   
   p {
-    color: white;
+    color: black;
   }
  
   div {
-  color: white;
-  background-color: darkblue;
+  color: black;
+  background-color: lightblue;
   }
