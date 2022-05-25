@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Game</title>
+    <link rel="stylesheet" href="war.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- TODO: MAKE RESPONSIVE -->
+
+<button class="color-mode-btn light--hidden" aria-label="Toggle light mode">Light Mode</button>
+<button class="color-mode-btn dark--hidden" aria-label="Toggle dark mode">Dark Mode</button>
+
+    <div class="game">
+        <h1>War!</h1>
+        <h4>A Card Game of War: You vs The Computer!</h4>
+        <div class="inner-game">
+
+            <div class="hand-container">
+                <div class="hand">
+                    <div class="robot-hand-amount"></div>
+                </div>
+                <div class="player-hand-number"> 26</div>
+            </div>
+            
+            <div class="display">
+                <label for="score" class="player-label">You 🤩</label>
+                <div class="card-container">
+                    <div class="player-card"></div>
+                    <div>
+                        <p class="player-card-amount"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="display">
+                <label for="score" class="🤖-label">🤖 Computer</label>
+                <div class="card-container">
+                    <div class="robot-card"></div>
+                    <div>
+                        <p class="robot-card-amount"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hand-container">
+                <div class="hand">
+                    <div class="player-hand-amount"></div>
+                </div>
+                <div class="robot-hand-number"> 26</div>
+            </div>
+
+        </div>
+        <button class="play-game button-57" role="button">
+            <span class="text">Play! 🤩</span><span>Flip a Card!</span>
+        </button>
+        <p class="refresh hidden">Refresh page to play again!</p>
+
+        <div class="contest-arena" id="contest">
+            <!-- set different phrases to appear when different events happen -->
+        </div>
+    </div>
+
+    <script src="./scripts/war.js"></script>
+</body>
+
+</html>
