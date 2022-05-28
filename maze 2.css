@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background-image: url("maze 2.png");
+    text-align: center;
+    font-family: Cambria;
+}
+p {
+	font-family: Cambria;
+	font-size: 19px;
+	color: black;
+	display: block;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.info {
+	margin: 14px auto;
+	text-align: justify;
+	font-size: 18px;
+	color: black;
+}
+
+label {
+	font-family: Cambria;
+	font-size: 18px;
+	color: black;
+	width: 400px;
+	margin: 0 auto;
+	display: block;
+}

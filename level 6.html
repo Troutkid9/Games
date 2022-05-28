@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Craig's Maze Run</title>
+
+    <link rel="stylesheet" type="text/css" href="maze.css" />
+
+    <script type="text/javascript" src="maze.js"></script>
+</head>
+
+<body>
+    <br></br>
+    <h1>LEVEL 6 🤩</h1>
+    <h5>⬇️ Instructions Down Below ⬇️</h5>
+    <canvas id="canvas"></canvas>
+
+    <p>
+        Use the left, right and up arrow keys to move.
+    </p>
+    <h4>If The Game Starts Bouncing for You, Click the Reset Button</h4>
+    <p class=""><a href="level 6.html"><button><strong>Reset</strong></button></a></p>
+    <h2>NEXT LEVEL! 🤩</h2>
+    <p class=""><a href="level 7.html"><button><strong>Level 7</strong></button></a></p>
+
+    <label for="viewport">
+        <input type="checkbox" id="viewport" onclick="game.limit_viewport=this.checked;" checked/> Confine viewport to map</label>
+        
+        <h4>Home Page</h4>
+        <p class=""><a href="index.html"><button><strong>Home Page</strong></button></a></p>
+    <script type="text/javascript">
+
+        window.requestAnimFrame =
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function(callback) {
+                return window.setTimeout(callback, 1000 / 60);
+        };
+
+        var canvas = document.getElementById('canvas'),
+            ctx    = canvas.getContext('2d');
+
+        canvas.width = 655;
+        canvas.height = 500;
+        
+        /* Customisable map data */
+
+        var map = {
+        
+            tile_size: 16,
+        
+            /*
+            
+            Key vairables:
+            
+            id       [required] - an integer that corresponds with a tile in the data array.
+            colour   [required] - any javascript compatible colour variable.
+            solid    [optional] - whether the tile is solid or not, defaults to false.
+            bounce   [optional] - how much velocity is preserved upon hitting the tile, 0.5 is half.
+            jump     [optional] - whether the player can jump while over the tile, defaults to false.
+            friction [optional] - friction of the tile, must have X and Y values (e.g {x:0.5, y:0.5}).
+            gravity  [optional] - gravity of the tile, must have X and Y values (e.g {x:0.5, y:0.5}).
+            fore     [optional] - whether the tile is drawn in front of the player, defaults to false.
+            script   [optional] - refers to a script in the scripts section, executed if it is touched.
+            
+            */
+            
+            keys: [
+                {id: 0, colour: 'gray', solid: 1},
+                {id: 1, colour: 'skyblue', solid: 0},
+                {id: 2,colour: 'black',solid: 1,bounce: 0.35},
+                {id: 3,colour: 'rgba(121, 220, 242, 0.4)',friction: {x: 0.9,y: 0.9},gravity: {x: 0,y: 0.15},jump: 1,fore: 1},
+                {id: 4,colour: '#777',jump: 1},
+                {id: 5,colour: '#E373FA',solid: 1,bounce: 1.1},
+                {id: 6,colour: '#666',solid: 1,bounce: 0},
+                {id: 7,colour: '#73C6FA',solid: 0,script: 'change_colour'},
+                {id: 8,colour: '#FADF73',solid: 0,script: 'next_level'},
+                {id: 9,colour: 'orangered',solid: 0,script: 'death'},
+                {id: 10,colour: 'gray',solid: 1},
+                {id: 11,colour: '#0FF',solid: 0,script: 'unlock'},
+                {id: 12,colour: 'yellow',solid: 1,bounce: 0.8},
+                {id: 13,colour: 'rgb(6, 155, 6)',solid: 0,script: 'death'},
+                {id: 14,colour: 'white',solid: 1},
+                {id: 15,colour: 'green',solid: 1},
+                {id: 16,colour: 'rgb(102, 45, 12)',solid: 0},
+                {id: 17,colour: 'yellow',solid: 0, script: 'death'},
+            ],
+        
+/* An array representing the map tiles. Each number corresponds to a key */
+data: [
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 14, 14, 14, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 14, 14, 1, 1, 1, 1, 1, 1, 2],
+[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 14, 14, 14, 14, 14, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 14, 14, 14, 14, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 14, 14, 14, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 14, 14, 14, 14, 14, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 15, 1, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 15, 1, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 15, 1, 15, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 15, 1, 15, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 15, 1, 15, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 15, 1, 15, 15, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 15, 1, 15, 15, 15, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+[2, 15, 15, 15, 16, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 2],
+[2, 15, 15, 15, 16, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 2],
+[2, 16, 16, 16, 16, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9, 0, 0, 9, 9, 16, 16, 16, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 7, 16, 16, 16, 2],
+[2, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 9, 9, 0, 0, 9, 16, 16, 16, 16, 16, 16, 0, 0, 0, 0, 0, 0, 0, 0, 16, 16, 16, 16, 16, 2],
+[2, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 9, 0, 9, 9, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 0, 0, 0, 0, 16, 16, 16, 16, 16, 2],
+[2, 16, 16, 16, 16, 16, 0, 0, 16, 16, 16, 16, 0, 16, 16, 16, 16, 16, 0, 16, 16, 16, 16, 0, 0, 16, 16, 16, 16, 0, 0, 0, 0, 0, 9, 16, 16, 16, 16, 16, 2],
+[2, 16, 16, 0, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 0, 0, 0, 9, 9, 16, 16, 16, 16, 16, 2],
+[2, 16, 16, 0, 0, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 0, 0, 9, 9, 16, 16, 16, 16, 16, 2],
+[2, 16, 16, 16, 0, 16, 0, 0, 0, 16, 16, 16, 16, 16, 0, 16, 16, 16, 16, 16, 16, 16, 16, 0, 7, 0, 0, 16, 16, 16, 16, 16, 16, 9, 9, 16, 16, 16, 16, 16, 2],
+[2, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 16, 16, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 2],
+[2, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 16, 16, 0, 16, 16, 16, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 2],
+[2, 0, 0, 16, 16, 16, 16, 16, 16, 0, 0, 0, 8, 16, 0, 0, 16, 10, 10, 16, 16, 16, 16, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 2],
+[2, 0, 0, 0, 16, 16, 16, 16, 0, 0, 0, 9, 16, 16, 16, 16, 16, 10, 10, 16, 16, 5, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 2],
+[2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 9, 0, 0, 0, 0, 16, 16, 16, 5, 5, 0, 0, 2],
+[2, 0, 11, 16, 16, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9, 9, 9, 9, 0, 0, 0, 9, 9, 9, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 2],
+[2, 0, 16, 16, 16, 16, 9, 0, 0, 0, 0, 0, 16, 16, 0, 9, 9, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 2],
+[2, 0, 16, 16, 16, 16, 16, 9, 0, 0, 0, 0, 16, 16, 0, 0, 9, 9, 9, 9, 0, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 0, 16, 0, 0, 0, 0, 0, 0, 2],
+[2, 0, 16, 16, 16, 16, 16, 16, 9, 0, 0, 0, 16, 16, 16, 0, 16, 16, 16, 0, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 16, 16, 16, 16, 16, 2],
+[2, 0, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 16, 16, 16, 16, 16, 2],
+[2, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 16, 12, 0, 16, 16, 16, 16, 16, 2],
+[2, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 2],
+[2, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 2],
+[2, 0, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 2],
+[2, 0, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 2],
+[2, 0, 16, 16, 16, 16, 16, 16, 0, 0, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 0, 16, 16, 16, 16, 16, 16, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 2],
+[2, 0, 16, 16, 16, 16, 16, 16, 0, 3, 3, 3, 12, 3, 3, 3, 3, 13, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 2],
+[2, 0, 0, 16, 16, 16, 16, 0, 0, 3, 3, 3, 3, 3, 13, 3, 3, 3, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0, 0, 0, 2],
+[2, 0, 0, 0, 16, 16, 0, 0, 0, 3, 13, 3, 3, 3, 3, 3, 13, 0, 0, 0, 0, 16, 16, 16, 16, 16, 16, 16, 0, 0, 16, 16, 16, 16, 16, 16, 0, 0, 0, 0, 2],
+[2, 0, 0, 0, 5, 5, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 16, 16, 16, 16, 12, 16, 16, 0, 0, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 2],
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+],        
+            /* Default gravity of the map */
+            
+            gravity: {
+                x: 0,
+                y: 0.3
+            },
+            
+            /* Velocity limits */
+        
+            vel_limit: {
+                x: 2,
+                y: 16
+            },
+        
+            /* Movement speed when the key is pressed */
+            
+            movement_speed: {
+                jump: 6,
+                left: 0.3,
+                right: 0.3
+            },
+            
+            /* The coordinates at which the player spawns and the colour of the player */
+        
+            player: {
+                x: 2,
+                y: 2,
+                colour: '#FF9900'
+            },
+            
+            /* scripts refered to by the "script" variable in the tile keys */
+        
+            scripts: {
+                change_colour: 'this.player.colour = "#"+(Math.random()*0xFFFFFF<<0).toString(16);',
+                /* you could load a new map variable here */
+                next_level: 'alert("Yay! You Won! Time for The Next Level! Click the Next Level Button at the Bottom of the Screen to Continue");this.load_map(map);',
+                death: 'alert("You Died! Try Again!");this.load_map(map);',
+                unlock: 'this.current_map.keys[10].solid = 0;this.current_map.keys[10].colour = "#888";'
+            }
+        };
+        
+        /* Setup of the engine */
+        
+        var game = new Clarity();
+        game.set_viewport(canvas.width, canvas.height);
+        game.load_map(map);
+
+        /* Limit the viewport to the confines of the map */
+        
+        game.limit_viewport = true;
+
+        var Loop = function() {
+
+            ctx.fillStyle = '#333';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            game.update();
+            game.draw(ctx);
+
+            window.requestAnimFrame(Loop);
+        };
+
+        /* Start */
+        
+        Loop();
+
+    </script>
+</body>
+
+</html>
